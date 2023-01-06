@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+//1)웹 프로그래밍
+//1. 사이트 주소를 입력한다
+//2.웹 페이지를 요청한다
+//3.해당 웹 페이지를 찾는다
+//4. 찾은 웹 페이지를 보낸다
+
+//새로운 정모를 바로바로 제공해야 하는데
+//=>동적페이지 등장!!!!
+
+//다양한 정보를 얻거나 저장하기 위해 등장한 언어
+//=>PHP, ASP, 서블릿/JSP
+
+//서버:사용자의 요청이 들어오면 이에 대한 처리를 한 결과 페이지를 전송하는
+//웹 서버(web server)와 db연동을 처리하는 비즈니스 로직이 구현되어야 하는
+//웹 애플리케이션 서버(Web Applicaition Server:WAS)로 이루어져 있다
+//ex)대표적인 WAS:Tomcat,Weblogic,Oracle9iA
+//Tomcat은 웹 서버 기능도 포함되어있다
+
+//3)서블릿과 JSP
+//Servlt:Server+Applet 합성어
+//:서버에서 실행되는 Applet
+//:자바 클래스 형태의 웹 애필리케이션
+//javax.servlet.http 패키지에서 제공하는 HttpServlet클래스를 상속받아 쿠현해야함
+
+//상속받는이유: HttpServlet에 웹 애플리케이션으로 동작하도록 하는 기본 동작 
+//즉, 요청에 대한 응답이 가능하도록 하는 내용이 들어있기 때문에 상속받아야함
+
+//4)클라이언트가 서버에 요청하는 방식
+//1. get방식 : 주소창을 타고 넘어가기 때문에 서버로 보내는 데이터를
+//사용자가 그대로 볼 수 있다. 보안에 취약하며 255자 이하의 적은 양의 
+//데이터를 전송한다.
+//2. post방식 : header를 타고 넘어가기 때문에 
+//보안에 강하다. 255자 이상의 대용량 데이터를 전송한다.
+//=>get방식으로 요청하면 doGet()가 호출
+//=>post방식으로 요청하면 doPost()가 호출
+<form action=”a” method=”get”>
+	<input type=”submit” value=”전송”>
+</form>
+<form action=”a” method=”post”>
+	<input type=”submit” value=”전송”>
+</form>
+
+WAS(톰캣엔진)이 메소드가 겟인지 포스트인지 찾아서
+겟이면 서블렛의 doGet()으로가고 
+메소드의 디폴트는 get이고
+메소드가 포스트면 적어줘야 되고
+form=action의 a태그는 안적어줘도 겟?이다
+
+</body>
+</html>
