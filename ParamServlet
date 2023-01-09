@@ -32,9 +32,12 @@ public class ParamServlet extends HttpServlet {
 		
 		String id=request.getParameter("id");
 		String study=request.getParameter("st");
+		int age=Integer.parseInt(request.getParameter("age"));
+		
 		PrintWriter out = response.getWriter();
 		out.print(id+"<br>");
 		out.print(study+"<br>");
+		out.print(age+"<br>");
 		
 		out.print("<a href='javascript:history.go(-1)'>다시</a>");
 		out.close();
