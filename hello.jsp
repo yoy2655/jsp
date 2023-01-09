@@ -17,7 +17,9 @@
 </head>
 <body>
 	<h1>Hello JSP</h1>
-	<%
+	<%=str %>
+	<%=max(a,b) %>
+	<%--
 	out.print(str+"<br>");
 	out.print(max(a,b));
 	
@@ -28,6 +30,8 @@
 	//int sum = n1 + n2;
 
 	//out.print(n1 + "+" + n2 + "=" + sum);
-	%>
+	--%>
+	
+	
 </body>
 </html>
