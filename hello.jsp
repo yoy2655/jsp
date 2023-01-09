@@ -17,7 +17,7 @@
 </head>
 <body>
 	<h1>Hello JSP</h1>
-	<%=str %>
+	<%=str %><br>
 	<%=max(a,b) %>
 	<%--
 	out.print(str+"<br>");
