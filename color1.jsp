@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR" import="java.util.Date" session="false"
+	errorPage="error.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 body {
-text-align:center;	
+	text-align: center;
 }
 </style>
 </head>
