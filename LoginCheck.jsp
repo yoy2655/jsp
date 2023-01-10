@@ -13,5 +13,6 @@
 	
 	<p style="background:<%=aa %>">나는 <%=aa %>색을 좋아한다</p>
 	
+	<%=10/0 %>
 </body>
 </html>
