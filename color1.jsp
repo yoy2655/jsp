@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR" import="java.util.Date" session="false"
+	pageEncoding="EUC-KR" import="java.util.*" session="false"
 	errorPage="error.jsp"%>
 <!DOCTYPE html>
 <html>
