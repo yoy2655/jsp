@@ -1,6 +1,8 @@
 package unit01;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,7 +47,23 @@ public class JoinServlet1 extends HttpServlet {
 		String addr2 = request.getParameter("addr2");
 		String phone = request.getParameter("phone");
 		String job = request.getParameter("job");
-		String[] no = request.getParameterValues("no");
+		String no = request.getParameter("no");
+		
+		PrintWriter out=response.getWriter();
+		
+		out.print(name+"<br>");
+		out.print(jumin1+"-"+jumin2+"<br>");
+		out.print(id+"<br>");
+		out.print(pw1+"<br>");
+		out.print(pw2+"<br>");
+		out.print(addr1+" "+addr2+"<br>");
+		out.print(email1+"@"+email2+"<br>");
+		out.print(phone+"<br>");
+		out.print(job+"<br>");
+		out.print(no+"<br>");
+		out.close();
+		
+		
 
 		
 	}
