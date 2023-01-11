@@ -95,7 +95,7 @@
 			if (fr.id.value.length < 4) {
 				alert("아이디는 네글자 이상이어야함");
 				return false;
-			} else if (fr.zipcode.value.substring(3, 1)!="-") {
+			} else if (fr.zipcode.value.indexOf("-")==-1) {
 				alert("zipcode는 -를 포함해야함");
 				return false;
 			} else if (fr.pwd1.value!=fr.pwd2.value) {
