@@ -16,7 +16,7 @@
 	<br>
 	해외 여행 <%=overseas%>
 	<br>
-	<a href="Trip1.jsp">다시 조회</a>
+	<a href="javascript:history.back()">다시 조회</a>
 	<%
 
 	%>
