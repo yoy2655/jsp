@@ -17,7 +17,7 @@ if(id!=""){%>
 <%}%>
 	<center>
 		<h2>회원 가입</h2>
-		<form action="Member" method="get">
+		<form action="Member1" method="get">
 			<table width="500" border="1">
 				<tr height="50">
 					<td width="150" align="center">아이디</td>
