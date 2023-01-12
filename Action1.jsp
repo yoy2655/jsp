@@ -18,3 +18,10 @@
 	</form>
 </body>
 </html>
+
+<!-- 
+값전달하는 방법
+1. <jsp:forward><jsp:param>
+2. RequestDisPactcher, forward
+3. response.sendRiderect() 
+-->
