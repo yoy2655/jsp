@@ -35,7 +35,7 @@
 		PreparedStatement pstmt=con.prepareStatement(sql);
 		
 		pstmt.setString(1,item.getName());
-		pstmt.setString(2,item.getPrice());
+		pstmt.setInt(2,item.getPrice());
 		pstmt.setString(3,item.getDesc1());
 		
 		pstmt.executeUpdate();
