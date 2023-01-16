@@ -1,7 +1,7 @@
 package unit01;
 
 
-public class MemberBean1 {
+public class MemberBean {
 	private String id;
 	private String pass1;
 	private String email;
