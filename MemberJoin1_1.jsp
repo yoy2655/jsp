@@ -8,7 +8,7 @@
 </head>
 <center>
 	<h2>회원가입</h2>
-	<form action="JoinProc1.jsp" method="post">
+	<form action="JoinProc.jsp" method="post">
 		<table width="500" border="1">
 			<tr height="50">
 				<td width="150" align="center">아이디</td>
