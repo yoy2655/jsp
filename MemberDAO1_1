@@ -28,7 +28,7 @@ public class MemberDAO { // DAO(Data Access Object)
 		}
 	}
 
-	public void insertMember(MemberBean1_1 mbean) {
+	public void insertMember(MemberBean mbean) {
 		try {
 			getCon();
 
@@ -51,8 +51,8 @@ public class MemberDAO { // DAO(Data Access Object)
 		}
 	}
 
-	public Vector<MemberBean1_1> allSelectMember() {
-		Vector<MemberBean1_1> v = new Vector<>();
+	public Vector<MemberBean> allSelectMember() {
+		Vector<MemberBean> v = new Vector<>();
 
 		try {
 			getCon();
@@ -62,7 +62,7 @@ public class MemberDAO { // DAO(Data Access Object)
 
 			// 쿼리 실행 시킨 결과를 리턴해서 저장
 			while (rs.next()) { // 저장된 데이터만큼까지 반복문을 돌리겠다
-				MemberBean1_1 bean = new MemberBean1_1();
+				MemberBean bean = new MemberBean();
 
 				bean.setId(rs.getString(1));
 				// 테이블에 저장되어 있는 데이터들을 MemberBean1에 저장
@@ -82,4 +82,86 @@ public class MemberDAO { // DAO(Data Access Object)
 		return v;
 	}
 
+	public MemberBean oneMember(String id) {
+		MemberBean bean = new MemberBean();
+		try {
+			getCon();
+			String sql = "select * from member where id=?";
+
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				bean.setId(rs.getString(1));
+				bean.setPass1(rs.getString(2));
+				bean.setEmail(rs.getString(3));
+				bean.setTel(rs.getString(4));
+				bean.setHobby(rs.getString(5));
+				bean.setJob(rs.getString(6));
+				bean.setAge(rs.getString(7));
+				bean.setInfo(rs.getString(8));
+			}
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return bean;
+	}
+
+	public String getPass(String id) {
+		String pass = "";
+		MemberBean bean = new MemberBean();
+		try {
+			getCon();
+
+			String sql = "select pass1 from member where id=?";
+
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				pass = rs.getString(1); // pass1
+			}
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return pass;
+	}
+
+	public void updateMember(MemberBean mbean) { // update라서 void씀
+		getCon();
+
+		try {
+			String sql = "update member set email=?,tel=? where id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mbean.getEmail());
+			pstmt.setString(2, mbean.getTel());
+			pstmt.setString(3, mbean.getId());
+
+			pstmt.executeUpdate();
+			con.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void deleteMember(String id) {
+		getCon();
+
+		try {
+			String sql = "delete from member where id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			pstmt.executeUpdate();
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
