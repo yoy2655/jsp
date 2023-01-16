@@ -1,4 +1,4 @@
-<%@page import="unit01.MemberDAO1_1"%>
+<%@page import="unit01.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,12 +18,12 @@
 			str += hobby[i] + "";
 		}
 	%>
-	<jsp:useBean id="mbean" class="unit01.MemberBean1_1">
+	<jsp:useBean id="mbean" class="unit01.MemberBean">
 		<jsp:setProperty name="mbean" property="*" />
 	</jsp:useBean>
 	<%
 	mbean.setHobby(str);
-		MemberDAO1_1 mdao=new MemberDAO1_1();
+		MemberDAO mdao=new MemberDAO();
 		mdao.insertMember(mbean);
 		
 		//회원가입이 되었다면 회원정보를 보여주는 페이지로 이동시켜라
