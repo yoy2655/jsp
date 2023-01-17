@@ -17,7 +17,7 @@
 
 <center>
 <h2>게시글 삭제</h2>
-<form aciton="DeleteProc.jsp" method="post">
+<form action="DeleteProc.jsp" method="post">
 <table width="600" border="1" bordercolor="yellow" bgcolor="pink">
 		<tr height="40">
 			<td width="150" align="center">작성자</td>
