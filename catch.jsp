@@ -14,10 +14,10 @@ ${city }
 
 <!--<c:redirect url="catch1.jsp"></c:redirect>-->
 <c:set var="age" value="22" scope="page"></c:set>
-나이:<c:out value="${age }"></c:out>
+나이:<c:out value="${age }"></c:out><br>
 
 <c:remove var="age" scope="page"/>
-나이:<c:out value="${age }"></c:out>
+나이:<c:out value="${age }"></c:out><br>
 
 <c:catch var="err">
 예외 전<br>
