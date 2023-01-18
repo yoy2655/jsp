@@ -8,13 +8,12 @@
 </head>
 <body>
 <%
-int n1=Integer.parseInt(request.getParameter("n1"));
-int n2=Integer.parseInt(request.getParameter("n2"));
+int n1=(Integer)request.getAttribute("n1");
+int n2=(Integer)request.getAttribute("n2");
 %>
 <br>
 <%=n1+n2 %><br>
 
-${param.n1+param.n2 }<br>
-${param["n1"]+param["n2"] }<br>
+${n1+n2 }<br>
 </body>
 </html>
