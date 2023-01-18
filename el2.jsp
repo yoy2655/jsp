@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login.jsp">
+<form action="login_el.jsp">
 id:<input type="text" name="id"><br>
 pw:<input type="password" name="pw"><br>
 <input type="submit" value="전송">
