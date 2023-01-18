@@ -1,0 +1,29 @@
+1.	페이지 a에서 페이지 b를 include하거나 b로 forward가 일어난 후에 요청이 처리되었다.
+이 때 두 페이지 사이에서만 공유되는 내장 객체는 무엇인가?
+->request 내장객체
+b에서 a로(response 내장객체)
+
+2. 2.	아래 액션을 보고 O, X체크해라.
+<jsp:useBean id=”m” class=”m.student”/>
+이름이 m인 자바빈 객체를 사용하겠다.(O)
+객체 유형은 m클래스 내부에 정의된 student클래스이다.(X)
+이 객체는 해당 페이지가 속한 세션이 종료될 때까지 유지될 수 있다.(O)
+
+3.	다음 페이지 실행할 때 결과가 다른 것은?
+<%request.setAttribute("name", "jongjin”)%>
+<!DOCTYPE html>
+<html>
+<body>
+${requestScope.name }<br>
+${requestScope['name'] }<br>
+${requestScope["name"] }<br>
+<%=request.getParameter("name") %>
+</body>
+</html>
+-><%=request.getParameter("name") %>
+
+4.	Get방식은 단순한 질의나 검색을 할 때 사용된다.(O)
+5.	forward액션은 주소창의 주소가 이전의 주소로 남아있다.(O)
+6.	forward액션은 request의 객체를 전달할 수 있다.(O)
+7.	페이지를 3개 만들어 이동시킬 때 pageContext,request,session의 차이점(언제까지 지속되는지)을 보여라. 
+PageContext->request->session
